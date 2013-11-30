@@ -1,6 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-git pull
+#git pull
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude "install-deps.sh" --exclude ".brew" --exclude ".osx" --exclude "README.md" -av ./ ~/
 }
