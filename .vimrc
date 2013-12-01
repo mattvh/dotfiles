@@ -41,3 +41,9 @@ set spell spelllang=en_us
 
 "GUI Mode
 set guifont=Menlo:h13
+
+"Map Command+] and Command+[ to indentation commands
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv

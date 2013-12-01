@@ -21,6 +21,9 @@ alias flushcache="dscacheutil -flushcache"
 alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
 alias iplocal="ipconfig getifaddr en1"
 
+# Open file in graphical MacVim
+alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
