@@ -27,6 +27,8 @@ set cmdheight=2
 set ruler
 set number
 set notimeout ttimeout ttimeoutlen=200
+set nobackup
+set noswapfile
 
 "Tabs
 set noexpandtab
