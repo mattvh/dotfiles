@@ -47,3 +47,7 @@ nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
+
+"NERDTree Plugin
+nmap <leader>nt :NERDTreeToggle <CR>
+let NERDTreeShowHidden=1
