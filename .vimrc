@@ -1,11 +1,18 @@
-execute pathogen#infect()
+"Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+"Bundles
+Bundle 'Shougo/neocomplete'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
+
+"General
 set nocompatible
 filetype indent plugin on
-
-"Colors
-syntax on
-set background=dark
-colorscheme solarized
 
 set hidden
 set wildmenu
@@ -30,6 +37,11 @@ set notimeout ttimeout ttimeoutlen=200
 set nobackup
 set noswapfile
 set virtualedit=onemore
+
+"Colors
+syntax on
+set background=dark
+colorscheme solarized
 
 "Tabs
 set noexpandtab
