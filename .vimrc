@@ -1,4 +1,8 @@
 "Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
 if filereadable(expand("~/.vimbundles"))
 	source ~/.vimbundles
 endif
