@@ -38,7 +38,9 @@ set virtualedit=onemore
 "Colors
 syntax on
 set background=dark
-colorscheme solarized
+if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
+	colorscheme solarized
+endif
 
 "Tabs
 set noexpandtab
@@ -67,8 +69,15 @@ vmap <D-]> >gv
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 "NERDTree Plugin
-nmap <leader>nt :NERDTreeToggle <CR>
-let NERDTreeShowHidden=1
+if filereadable(expand("~/.vim/bundle/nerdtree/plugin/NERD_tree.vim"))
+	nmap <leader>nt :NERDTreeToggle <CR>
+	let NERDTreeShowHidden=1
+endif
 
 "Neocomplete Plugin
-let g:neocomplete#enable_at_startup = 1
+if filereadable(expand("~/.vim/bundle/neocomplete/plugin/neocomplete.vim"))
+	let g:neocomplete#enable_at_startup = 1
+	let g:neocomplete#enable_smart_case = 1
+	let g:neocomplete#enable_auto_delimiter = 1
+	let g:neocomplete#max_list = 15
+endif
