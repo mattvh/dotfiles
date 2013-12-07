@@ -56,3 +56,6 @@ vmap <D-]> >gv
 "NERDTree Plugin
 nmap <leader>nt :NERDTreeToggle <CR>
 let NERDTreeShowHidden=1
+
+"Neocomplete Plugin
+let g:neocomplete#enable_at_startup = 1

@@ -10,6 +10,9 @@ brew install bash
 # Install wget with IRI support
 brew install wget --enable-iri
 
+# Install vim
+brew install vim --with-lua
+
 # Install everything else
 brew install ack
 brew install git
