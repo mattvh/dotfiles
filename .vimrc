@@ -29,6 +29,7 @@ set number
 set notimeout ttimeout ttimeoutlen=200
 set nobackup
 set noswapfile
+set virtualedit=onemore
 
 "Tabs
 set noexpandtab
@@ -52,6 +53,9 @@ nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
+
+"Switch to working dir when opening a new buffer
+autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 "NERDTree Plugin
 nmap <leader>nt :NERDTreeToggle <CR>
