@@ -10,12 +10,15 @@ brew install bash
 # Install wget with IRI support
 brew install wget --enable-iri
 
+# Install git
+brew install git
+
 # Install vim
 brew install vim --with-lua
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 # Install everything else
 brew install ack
-brew install git
 brew install rename
 brew install tree
 brew install curl
