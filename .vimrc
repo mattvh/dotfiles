@@ -1,14 +1,7 @@
 "Vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-"Bundles
-Bundle 'Shougo/neocomplete'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
-Bundle 'altercation/vim-colors-solarized'
+if filereadable(expand("~/.vimbundles"))
+	source ~/.vimbundles
+endif
 
 "General
 set nocompatible
