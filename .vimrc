@@ -114,9 +114,7 @@ endif
 if filereadable(expand("~/.vim/bundle/vim-airline/plugin/airline.vim"))
 	let g:airline_theme = 'solarized'
 	set noshowmode
-	if !exists('g:airline_powerline_fonts')
-		let g:airline_left_sep='›'
-		let g:airline_right_sep='‹'
-	endif
+	let g:airline_left_sep=''
+	let g:airline_right_sep=''
 endif
 
