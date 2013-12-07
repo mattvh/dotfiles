@@ -76,8 +76,23 @@ endif
 
 "Neocomplete Plugin
 if filereadable(expand("~/.vim/bundle/neocomplete/plugin/neocomplete.vim"))
+
 	let g:neocomplete#enable_at_startup = 1
 	let g:neocomplete#enable_smart_case = 1
 	let g:neocomplete#enable_auto_delimiter = 1
 	let g:neocomplete#max_list = 15
+
+	"Disable enter completing, enable for tab
+	inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+	function! s:my_cr_function()
+		return neocomplete#close_popup() . "\<CR>"
+	endfunction
+	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+	autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+	autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
 endif
