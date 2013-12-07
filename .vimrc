@@ -44,6 +44,9 @@ set spell spelllang=en_us
 "GUI Mode
 set guifont=Menlo:h13
 
+"Paste mode, for pasting large blocks of text from other apps
+set pastetoggle=<F2>
+
 "Map Command+] and Command+[ to indentation commands
 nmap <D-[> <<
 nmap <D-]> >>
