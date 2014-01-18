@@ -118,3 +118,6 @@ if filereadable(expand("~/.vim/bundle/vim-airline/plugin/airline.vim"))
 	let g:airline_right_sep=''
 endif
 
+
+"Markdown Plugin
+let g:vim_markdown_folding_disabled=1
