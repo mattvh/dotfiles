@@ -8,7 +8,9 @@ unset file
 
 # rbenv init
 # rbenv init
-eval "$(rbenv init -)"
+if hash rbenv 2>/dev/null; then
+	eval "$(rbenv init -)"
+fi
 
 
 # Prefer US English and use UTF-8

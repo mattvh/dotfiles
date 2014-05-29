@@ -7,7 +7,11 @@ Bundle 'gmarik/vundle'
 
 
 "Bundles
-Bundle 'Shougo/neocomplete'
+
+if has('lua')
+	Bundle 'Shougo/neocomplete'
+end
+
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tomasr/molokai'
