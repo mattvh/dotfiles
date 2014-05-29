@@ -35,8 +35,8 @@ set virtualedit=onemore
 "Colors
 syntax on
 set background=dark
-if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-	colorscheme solarized
+if filereadable(expand("~/.vim/bundle/molokai/colors/molokai.vim"))
+	colorscheme molokai
 endif
 
 "Tabs
@@ -112,7 +112,7 @@ endif
 
 "Airline Plugin
 if filereadable(expand("~/.vim/bundle/vim-airline/plugin/airline.vim"))
-	let g:airline_theme = 'solarized'
+	let g:airline_theme = 'jellybeans'
 	set noshowmode
 	let g:airline_left_sep=''
 	let g:airline_right_sep=''
