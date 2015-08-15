@@ -6,12 +6,12 @@ These files make up my current terminal environment. This repo is mostly for my 
 
 **Warning:** This will clobber your existing dotfiles. Unless you know what you're doing and you're sure you want to **replace your .bash_profile, .bashrc, .vimrc**, and similar files, **do not run these commands.**
 
-    git clone https://github.com/redwallhp/dotfiles.git
+    git clone https://github.com/mattvh/dotfiles.git
     cd dotfiles
-    ./install-mac-deps.sh
     ./sync.sh
     
 To set set some OS X settings and install essential utilities through Homebrew:
 
-    ./.osx
-    ./.brew
+    ./osx/install-mac-deps.sh
+    ./osx/brew.sh
+    ./osx/osx.sh
