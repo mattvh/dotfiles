@@ -23,6 +23,7 @@ brew install rename
 brew install tree
 brew install curl
 brew install siege
+brew install tmux
 
 # Remove outdated versions from the cellar
 brew cleanup

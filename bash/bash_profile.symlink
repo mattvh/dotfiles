@@ -1,0 +1,33 @@
+# Get OS
+if [ "$(uname -s)" = "Darwin" ]; then
+    OS="OSX"
+else
+    OS=$(uname -s)
+fi
+
+# Load extra, bash_prompt, exports, aliases and functions
+# ~/.extra can be used for settings you don't want to commit
+for file in `find $HOME/.dotfiles/bash/*.sh`; do
+	[ -f "$file" ] && source "$file"
+done
+[ -r "$HOME/.extra" ] && source "$HOME/.extra"
+unset file
+
+
+# rbenv init
+if [ "$OS" = "OSX" ]; then
+    if hash rbenv 2>/dev/null; then
+    	eval "$(rbenv init -)"
+    fi
+fi
+
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+
+# Colors 
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export GREP_OPTIONS='--color=auto'

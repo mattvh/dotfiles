@@ -19,7 +19,7 @@
 [merge]
 	log = true
 [user]
-	name = redwallhp
+	name = mattvh
 	email = matt@ntugo.com
 [push]
 	default = simple

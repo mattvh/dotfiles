@@ -8,7 +8,7 @@ These files make up my current terminal environment. This repo is mostly for my 
 
     git clone https://github.com/redwallhp/dotfiles.git
     cd dotfiles
-    ./install-deps.sh
+    ./install-mac-deps.sh
     ./sync.sh
     
 To set set some OS X settings and install essential utilities through Homebrew:
