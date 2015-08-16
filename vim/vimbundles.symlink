@@ -17,7 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 filetype plugin indent on
