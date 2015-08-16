@@ -22,31 +22,45 @@ set nostartofline
 set laststatus=2
 set confirm
 set visualbell
+set noerrorbells
 set t_vb=
 set mouse=a
 set cmdheight=2
 set ruler
+set relativenumber
 set number
 set notimeout ttimeout ttimeoutlen=200
 set nobackup
 set noswapfile
 set virtualedit=onemore
+set showbreak=…
 
 "Colors
 syntax on
 set background=dark
 if filereadable(expand("~/.vim/bundle/base16-vim/colors/base16-monokai.vim"))
 	let base16colorspace=256
+	set t_Co=256
 	colorscheme base16-monokai
 endif
 
 "Tabs
-set noexpandtab
+set expandtab
+set smarttab
 set copyindent
 set preserveindent
-set softtabstop=0
+set softtabstop=4
 set shiftwidth=4
+set shiftround
 set tabstop=4
+
+if has('autocmd') && !exists('autocommands_loaded')
+	let autocommands_loaded = 1
+	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType html setlocal ts=4 sts=4 sw=4 noexpandtab
+	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
+endif
 
 "Spelling
 set spell spelllang=en_us
