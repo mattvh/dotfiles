@@ -5,6 +5,7 @@ else
     OS=$(uname -s)
 fi
 
+
 # Load extra, bash_prompt, exports, aliases and functions
 # ~/.extra can be used for settings you don't want to commit
 for file in `find $HOME/.dotfiles/bash/*.sh`; do
@@ -25,6 +26,11 @@ fi
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
+
+
+# Base16 colors
+BASE16_SHELL="$HOME/.dotfiles/bash/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 
 # Colors 

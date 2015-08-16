@@ -1,21 +1,23 @@
 "Vundle Setup
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
 
 "Bundles
 
 if has('lua')
-	Bundle 'Shougo/neocomplete'
+	Plugin 'Shougo/neocomplete'
 end
 
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tomasr/molokai'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'lunaru/vim-less'
-Bundle 'plasticboy/vim-markdown'
+Plugin 'chriskempson/base16-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'plasticboy/vim-markdown'
+
+call vundle#end()
+filetype plugin indent on

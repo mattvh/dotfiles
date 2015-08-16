@@ -14,10 +14,15 @@ echo "Creating symlinks..."
 tolink=$( find -H "$HOME/.dotfiles" -maxdepth 3 -name '*.symlink' )
 for file in $tolink; do
 	target="$HOME/.$( basename $file ".symlink" )"
-	echo "Creating symlink for $file"
-	mv $target "$HOME/.dotfiles/.backup"
-	ln -s $file $target
+	if [[ -f $target && ! -L $target ]]; then
+		mv $target "$HOME/.dotfiles/.backup"
+	fi
+	if [[ ! -f $target && ! -L $target ]]; then
+		echo "Creating symlink for $file"
+		ln -s $file $target
+	fi
 done
+echo "Done."
 
 
 source ~/.bash_profile

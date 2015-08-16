@@ -35,8 +35,9 @@ set virtualedit=onemore
 "Colors
 syntax on
 set background=dark
-if filereadable(expand("~/.vim/bundle/molokai/colors/molokai.vim"))
-	colorscheme molokai
+if filereadable(expand("~/.vim/bundle/base16-vim/colors/base16-monokai.vim"))
+	let base16colorspace=256
+	colorscheme base16-monokai
 endif
 
 "Tabs
