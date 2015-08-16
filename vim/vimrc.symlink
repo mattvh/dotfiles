@@ -34,6 +34,8 @@ set nobackup
 set noswapfile
 set virtualedit=onemore
 set showbreak=…
+set splitbelow
+set splitright
 
 "Colors
 syntax on
