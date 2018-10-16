@@ -108,7 +108,7 @@ if filereadable(expand("~/.vim/bundle/neocomplete/plugin/neocomplete.vim"))
 	autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 	autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+	"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 endif
@@ -137,5 +137,8 @@ endif
 
 
 " Jedi Vim
-let g:python_host_prog = glob('~/.virtualenvs/neovim2/bin/python')
-let g:python3_host_prog = glob('~/.virtualenvs/neovim3/bin/python')
+if filereadable(expand("~/.vim/bundle/vim-airline/plugin/airline.vim"))
+    let g:python_host_prog = glob('~/.virtualenvs/neovim2/bin/python')
+    let g:python3_host_prog = glob('~/.virtualenvs/neovim3/bin/python')
+    autocmd FileType python setlocal completeopt-=preview
+endif
