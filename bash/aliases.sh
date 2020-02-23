@@ -11,6 +11,10 @@ alias gitundopush="git push -f origin HEAD^:master"
 # Syntax: dvdiso DVD_NAME /path/to/VIDEO_TS/parent/folder
 alias dvdiso="hdiutil makehybrid -udf -udf-volume-name $1 -o $1.iso $2"
 
+# Download a YouTube video URL as an MP3
+alias ytmp3="youtube-dl --extract-audio --audio-format mp3 $1"
+alias ytm4a="youtube-dl --extract-audio --audio-format m4a $1"
+
 # Edit /etc/hosts
 alias hosts='sudo vim /etc/hosts'
 
